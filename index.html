@@ -604,7 +604,7 @@
       <a href="https://item.taobao.com/item.htm?ft=t&amp;id=772117674918" target="_blank" class="shop-btn">立即下单</a>
       <h1 class="title" id="siteTitle">FF14装修模版</h1>
       <div class="admin-top">
-        <a href="https://pan.quark.cn/s/9ab3a486b184" target="_blank" class="admin-btn" id="viewBtn" style="display: inline-block;">全景图网盘</a>
+        <a href="https://pan.quark.cn/s/9ab3a486b184" target="_blank" class="admin-btn" id="viewBtn" style="display: inline-block; background:#ff3c00;">全景图网盘</a>
         <button class="admin-btn exit-admin" id="exitAdmin" style="display: none;">退出管理</button>
       </div>
     </div>
@@ -1207,6 +1207,7 @@
         btn.classList.add("active");
         nowMain=btn.dataset.val;
         nowSub="all";
+        if(dom.styleSelect) dom.styleSelect.value = "all";
         yardSubType=null;
         checkedGlobalIndices=[];
         updateYardSubBarVisibility();
@@ -1221,6 +1222,7 @@
           const subVal = btn.getAttribute("data-yard-sub");
           if(yardSubType === subVal) yardSubType = null;
           else yardSubType = subVal;
+          if(dom.styleSelect) dom.styleSelect.value = "all";
           checkedGlobalIndices=[];
           updateYardSubBarVisibility();
           render();
